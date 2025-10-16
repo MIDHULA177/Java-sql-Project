@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Tracker</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        /* Basic clean styles (you can also move these into style.css) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background-color: #141414;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header h1 {
+            color: #E50914;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        nav a {
+            color: #bbb;
+            margin: 0 0.8rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #E50914;
+        }
+        .container {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #E50914;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #141414;
+            color: #777;
+            margin-top: 3rem;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 0.4rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Netflix Tracker</h1>
+    <nav>
+        <a th:href="@{/movies}">Movies</a>
+        <a th:href="@{/users}">Users</a>
+        <a th:href="@{/recommendations}">Recommendations</a>
+        <a th:href="@{/watch-history}">Watch History</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2>Welcome to Netflix Tracker 🎬</h2>
+    <p>Track what you watch, rate movies, and get smart recommendations tailored to your taste.</p>
+</main>
+
+<footer>
+    © 2025 Netflix Tracker | Built with Spring Boot & Thymeleaf
+</footer>
+</body>
+</html>
