@@ -100,55 +100,6 @@ Security	Spring Security / JWT Authentication
 Version Control	Git & GitHub
 Build Tool	Maven / npm
 IDE	VS Code / IntelliJ IDEA / PyCharm
-🗄️ Database Design
-👤 users
-Field	Type	Description
-user_id	BIGINT	Primary Key
-username	VARCHAR(100)	Unique username
-password	VARCHAR(255)	Encrypted password
-email	VARCHAR(255)	User email
-🎬 movies
-Field	Type	Description
-movie_id	BIGINT	Primary Key
-title	VARCHAR(255)	Movie or series title
-genre	VARCHAR(100)	Genre (Action, Drama, etc.)
-release_year	INT	Year of release
-duration	VARCHAR(50)	Runtime (in minutes or seasons)
-🧾 watchlist
-Field	Type	Description
-id	BIGINT	Primary Key
-user_id	BIGINT	Foreign Key (users)
-movie_id	BIGINT	Foreign Key (movies)
-status	VARCHAR(50)	(Watching / Completed / Plan to Watch / Dropped)
-date_added	DATE	When it was added
-⭐ ratings
-Field	Type	Description
-id	BIGINT	Primary Key
-user_id	BIGINT	Foreign Key (users)
-movie_id	BIGINT	Foreign Key (movies)
-rating	FLOAT	User rating (1–10)
-review	TEXT	Optional review text
-🔗 RESTful API Endpoints
-Endpoint	Method	Description
-/users/register	POST	Register new user
-/users/login	POST	Login
-/movies	GET	Fetch all movies
-/movies/add	POST	Add new movie
-/watchlist	GET	Get user’s watchlist
-/watchlist/add	POST	Add to watchlist
-/watchlist/delete/{id}	DELETE	Remove from watchlist
-/ratings/add	POST	Add or update rating
-/analytics	GET	View user statistics
-🧮 Role-Based Access
-Role	Permissions
-User	Manage personal watchlist, ratings, and reviews
-Admin	Manage all users and database entries
-Guest	View movie database (limited access)
-
-
-Access in Browser
-
-http://localhost:8080
 
 📈 Future Enhancements
 
